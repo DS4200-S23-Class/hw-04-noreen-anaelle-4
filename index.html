@@ -11,17 +11,72 @@
 <body>
 <h1>hw-04: Event Handling</h1>
 <!-- not put into columns yet -->
-<div class = "scatterplot">
-    <svg width = "500" height = "500">
-        <line id = "x-axis" x1="0" y1="500" x2="500" y2="500" />
-        <line id = "y-axis" x1="0" y1="0" x2="0" y2="500" />
-        <circle class = "circle" cx="55" cy="395" r="5"  onclick="onClick()"/>
-        <circle class = "circle" cx="105" cy="295" r="5" onclick="onClick()"/>
-        <circle class = "circle" cx="305" cy="395" r="5"  onclick="onClick()"/>
-        <circle class = "circle" cx="455" cy="45" r="5" onclick="onClick()"/>
-    </svg>
+<div class="row">
+    <div class="column1">
+        <div class = "scatterplot">
+            <svg width = "500" height = "500">
+                <line id = "x-axis" x1="0" y1="500" x2="500" y2="500" />
+                <line id = "y-axis" x1="0" y1="0" x2="0" y2="500" />
+                <circle class = "circle" id = "(1,2)" cx="55" cy="395" r="5"  onclick="onClick()"/>
+                <circle class = "circle" id = "(2,4)" cx="105" cy="295" r="5" onclick="onClick()"/>
+                <circle class = "circle" id = "(6,2)" cx="305" cy="395" r="5"  onclick="onClick()"/>
+                <circle class = "circle" id = "(9,9)" cx="455" cy="45" r="5" onclick="onClick()"/>
+            </svg>
+        </div>
+    </div>
+    <div class="column2">
+        <p>
+            Last point clicked:
+            <p id = "coordinates">
+                (,)
+            </p> 
+        </p>
+        <form>          
+            <label for="xvals">Select an x-coordinate value:
+            </label>
+            <select id="xvalues" name="X-Values">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </form>        
+        <form>
+            <label for="yvals"> Select an y-coordinate value:
+            </label>
+            <select id="yvalues" name="Y-Values">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </form>
+        <input type="button">Add Point!</input>
+
+    </div>
+  </div>
+  <div class ="row">
+  <h2> Acknowledgements</h1>
+    <div id="acknowledgements">
+        <ul>
+            <li> <a href = 'https://www.w3schools.com/howto/howto_css_two_columns.asp'> Two-Column Layout</a> </li>
+            <li> <a href = 'w3schools.com/html/html_form_elements.asp'> Creating a Dropdown</a> </li>
+        </ul>
+    </div>
 </div>
+
 <script src = 'main.js'></script> 
+
 </body>
 
 </html>

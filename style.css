@@ -8,14 +8,23 @@ h1{
     text-align: center;
 }
 
-/* Create two unequal columns that floats next to each other
-.column {
-    float: left;
-    padding: 10px;
-    
-  }
+/* Create two unequal columns that floats next to each other*/
+.column1 {
+  float: left;
+  width: 60%;
+}
+.column2 {
+  float: right;
+  width: 40%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .scatterplot{
+ /* .scatterplot{
     display: flex;
     justify-content: left;
   } */
@@ -35,21 +44,9 @@ h1{
   }
 
  .circle:hover{
-    fill:orangered;
+  fill:orangered;
   }
+  h2{
+    text-align: center;
+}
 
-
-  /* .left {
-    width: 60%;
-  }
-  
-  .right {
-    width: 40%;
-  }
-   */
-  /* Clear floats after the columns
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
