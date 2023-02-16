@@ -7,62 +7,30 @@
     <title>hw-04</title>
 </head>
 
-
 <body>
 <h1>hw-04: Event Handling</h1>
-<!-- not put into columns yet -->
 <div class="row">
     <div class="column1">
         <div class = "scatterplot">
             <svg width = "500" height = "500">
                 <line id = "x-axis" x1="0" y1="500" x2="500" y2="500" />
                 <line id = "y-axis" x1="0" y1="0" x2="0" y2="500" />
-                <circle class = "circle" id = "(1,2)" cx="55" cy="395" r="5"  onclick="onClick()"/>
-                <circle class = "circle" id = "(2,4)" cx="105" cy="295" r="5" onclick="onClick()"/>
-                <circle class = "circle" id = "(6,2)" cx="305" cy="395" r="5"  onclick="onClick()"/>
-                <circle class = "circle" id = "(9,9)" cx="455" cy="45" r="5" onclick="onClick()"/>
+                <circle class = "circle" id = "(1,2)" cx="55" cy="395" r="5"  />
+                <circle class = "circle" id = "(2,4)" cx="105" cy="295" r="5" />
+                <circle class = "circle" id = "(6,2)" cx="305" cy="395" r="5"  />
+                <circle class = "circle" id = "(9,9)" cx="455" cy="45" r="5" />
             </svg>
         </div>
     </div>
+
     <div class="column2">
         <p>
             Last point clicked:
-            <p id = "coordinates">
-                (,)
-            </p> 
+            <p id = "coordinates"> (,) </p> 
+            Select an X-Value (1-9): <input type="range" id="xRange" min="1" max="9"> <br>
+            Select a Y-Value(1-9):<input type="range" id="yrange" min="1" max="9">
         </p>
-        <form>          
-            <label for="xvals">Select an x-coordinate value:
-            </label>
-            <select id="xvalues" name="X-Values">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-        </form>        
-        <form>
-            <label for="yvals"> Select an y-coordinate value:
-            </label>
-            <select id="yvalues" name="Y-Values">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-        </form>
-        <input type="button">Add Point!</input>
-
+        <button onClick = "getCoords()"> Add Point</button>
     </div>
   </div>
   <div class ="row">
