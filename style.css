@@ -2,10 +2,12 @@
 body{
     font-family: Arial;
   }
-
   
 h1{
     text-align: center;
+}
+h2{
+  text-align: center;
 }
 
 /* Create two unequal columns that floats next to each other*/
@@ -24,12 +26,7 @@ h1{
   clear: both;
 }
 
- /* .scatterplot{
-    display: flex;
-    justify-content: left;
-  } */
-
-
+/* Set line colors */
   #x-axis{
     stroke: black;
     stroke-width: 10px;
@@ -38,15 +35,15 @@ h1{
     stroke: black;
     stroke-width: 10px;
   }
+
+  /* Sett attributes about circle */
   .circle{
     fill:lightsalmon;
     
   }
-
+/* If you hover over aa circle change its color */
  .circle:hover{
   fill:orangered;
   }
-  h2{
-    text-align: center;
-}
+  
 
